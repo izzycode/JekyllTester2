@@ -8,8 +8,8 @@ author: ""
 publisher: ""
 image: ""
 
-tags: []
-categories: []
+tags: [ tag2, tag3 ]
+categories: [ development, testing ]
 ---
 
 
