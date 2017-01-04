@@ -26,4 +26,11 @@
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
-</head>
+
+  {% include default_rich_meta.html %}
+
+  {% if page.layout == 'post' %}
+    {% include article_rich_meta.html %}
+  {% endif %}
+
+  </head>

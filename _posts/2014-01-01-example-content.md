@@ -1,6 +1,15 @@
 ---
 layout: post
 title: Example content
+
+# these are necessary fields for structured data testing
+description: ""
+author: ""
+publisher: ""
+image: ""
+
+tags: []
+categories: []
 ---
 
 

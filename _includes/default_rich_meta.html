@@ -1,0 +1,34 @@
+<!-- Rich meta data -->
+<script type="application/ld+json">
+    {
+      "@context":"http://schema.org",
+      "@type":"WebSite",
+      "name": "Bash Network",
+      "url":"http://bashnetwork.com",
+      "potentialAction":{
+        "@type":"SearchAction",
+        "target":"https://www.bashnetwork.com/search?query={search_term}",
+        "query-input":"required name=search_term"
+        }
+    }
+</script>
+<script type="application/ld+json">
+    {
+      "@context":"http://schema.org",
+      "@type":"Organization",
+      "name":"Bash Network",
+      "url": "{{ site.author.contact.url }}",
+      "logo":"",
+      "sameAs": [
+        "{{ site.author.contact.facebook }}",
+        "{{ site.author.contact.twitter }}",
+        "{{ site.author.contact.google_plus }}"
+      ],
+      "contactPoint": [
+        {   "@type": "ContactPoint",
+        "telephone": "",
+        "contactType": "sales",
+        "areaServed": [ "US" ] }
+      ]
+    }
+</script>
