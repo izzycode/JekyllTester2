@@ -1,18 +1,22 @@
 ---
 layout: post
-title: Exemple de contenu
-date: '2013-12-31 11:10:58'
+title: Exemple de conteneu
+
+# these are necessary fields for structured data testing
+description: ""
+author: ""
+publisher: ""
+image: ""
+
 tags:
-- vie nocturne
-- dj
+- identification2
+- identification3
 categories:
-- production
-description: Ce serveur post comme un exemple de contenu
-author: Une jolie dame
-publisher: L'éditeur
-image: no image :(
+- développement
+- essai
 
 lang: fr
+ref: example
 ---
 
 # H1

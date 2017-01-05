@@ -1,7 +1,13 @@
 # Site Info Setup
-title: "Bashnetwork Blog"
-tagline: "Bash Network - The Party Network"
-description: "Bashnetwork's blog."
+title:
+  en: Bashnetwork Blog
+  fr: Bashnetwork BLog
+tagline:
+  en: Bash - The Party Network
+  fr: Bash - Le Réseau Party
+description:
+  en: "Bashnetwork's blog"
+  fr: Le Blog de Bashnetwork
 url: http://127.0.0.1:4000/
 baseurl: "/"
 
@@ -37,15 +43,20 @@ nav:
   Home:
     - '/'
   Blog:
-    - '/blog/'
-    - { Categories: '/blog/categories/' }
-    - { Tags: '/blog/tags/' }
+    # - '/blog/'
+    - Categories:
+        en: '/blog/categories/'
+        fr: '/blogue/categories'
+    - Tags:
+        en: '/blog/tags/'
+        fr: '/blogue/identifications/'
   About:
-    - '/about/'
+    en: '/about/'
+    fr: '/a-propos/'
 
 # Where are tags and categories displayed
-tag_page: '/blog/tags/'
-category_page: '/blog/categories/'
+# tag_page: '/blog/tags/'
+# category_page: '/blog/categories/'
 
 # Puglins
 mathjax: true # whether support mathjax
