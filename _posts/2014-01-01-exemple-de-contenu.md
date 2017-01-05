@@ -1,21 +1,18 @@
 ---
 layout: post
-title: Example content
-
-# these are necessary fields for structured data testing
-description: ""
-author: ""
-publisher: ""
-image: ""
-
+title: Exemple de contenu
+date: '2013-12-31 11:10:58'
 tags:
-- tag2
-- tag3
+- vie nocturne
+- dj
 categories:
-- development
-- testing
+- production
+description: Ce serveur post comme un exemple de contenu
+author: Une jolie dame
+publisher: L'éditeur
+image: no image :(
 
-lang: en
+lang: fr
 ---
 
 # H1
@@ -41,8 +38,9 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
+
 <div class="message">
-  Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
+  Salut! Il s'agit d'un exemple de billet de blog qui montre plusieurs types de contenu HTML pris en charge dans ce thème.
 </div>
 
 Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. *Aenean eu leo quam.* Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.
@@ -53,18 +51,18 @@ Etiam porta **sem malesuada magna** mollis euismod. Cras mattis consectetur puru
 
 ## Inline HTML elements
 
-HTML defines a long list of available inline tags, a complete list of which can be found on the [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
+HTML définit une longue liste de balises en ligne disponibles, dont une liste complète peut être trouvée sur le [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
 
-- **To bold text**, use `<strong>`.
-- *To italicize text*, use `<em>`.
-- Abbreviations, like <abbr title="HyperText Markup Langage">HTML</abbr> should use `<abbr>`, with an optional `title` attribute for the full phrase.
-- Citations, like <cite>&mdash; Mark otto</cite>, should use `<cite>`.
-- <del>Deleted</del> text should use `<del>` and <ins>inserted</ins> text should use `<ins>`.
-- Superscript <sup>text</sup> uses `<sup>` and subscript <sub>text</sub> uses `<sub>`.
+- **To bold text**, utilisez `<strong>`.
+- *To italicize text*, utilisez `<em>`.
+- Abréviations, comme <abbr title="HyperText Markup Langage">HTML</abbr> devrait utiliser `<abbr>`, avec un titre facultatif `title` attribut pot la phrase complète.
+- Citations, comme <cite>&mdash; Mark otto</cite>, utilisez `<cite>`.
+- <del>Supprimé</del> doit utiliser `<del>` and <ins>inserted</ins> text should use `<ins>`.
+- Superscript <sup>text</sup> utilise `<sup>` et subscript <sub>text</sub> utilise `<sub>`.
 
-Most of these elements are styled by browsers with few modifications on our part.
+La plupart de ces éléments sont conçus par des navigateurs avec peu de modifications de notre part.
 
-## Heading
+## Heading(H2)
 
 Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
 
@@ -73,9 +71,9 @@ Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor. Duis mollis, est 
 Cum sociis natoque penatibus et magnis dis `code element` montes, nascetur ridiculus mus.
 
 {% highlight js %}
-// Example can be run directly in your JavaScript console
+// L'exemple peut être exécuté directement dans votre console JavaScript
 
-// Create a function that takes two arguments and returns the sum of those arguments
+// Crée une fonction qui prend deux arguments et retourne la somme de ces arguments
 var adder = new Function("a", "b", "return a + b");
 
 // Call the function
