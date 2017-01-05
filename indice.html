@@ -2,39 +2,22 @@
 layout: default
 title: Accueil
 
-lang: en
+lang: fr
 ref: home
 ---
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ site.url }}{{ site.baseurl }}/{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
+<h1>C'est la page d'accueil du blog</h1>
 
-    <span class="post-date">{{ post.date | date_to_string }}</span>
+<div id="featured-blogs">
+  <h2>Blogs en vedette</h2>
+</div><!-- /#featured-blogs -->
 
-    {{ post.content }}
-  </div>
-  {% endfor %}
-</div>
+<div id="category-index">
+  <h2>Catégories</h2>
+</div><!-- /#category-index -->
 
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ site.url }}{{ site.baseurl }}/page{{paginator.next_page}}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}/">Newer</a>
-    {% else %}
-      <a class="pagination-item newer" href="{{ site.url }}{{ site.baseurl }}/page{{paginator.previous_page}}">Newer</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
-</div>
+<div id="recent-blogs">
+  <h2>Blogs récents</h2>
+</div><!-- /#recent-blogs -->
+
+<h3><a href="{{ site.url }}{{ base.url }}/blog/indice">Tous les blogs</a></h3>

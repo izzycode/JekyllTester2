@@ -5,7 +5,7 @@
 <!-- Toggleable sidebar -->
 <div class="sidebar" id="sidebar">
   <div class="sidebar-item">
-    <p>{{ site.description }}</p>
+    <p>{{ site.description[page.lang] }}</p>
   </div>
 
   <nav class="sidebar-nav">
@@ -25,8 +25,10 @@
       {% endif %}
     {% endfor %}
 
-    <a class="sidebar-nav-item" href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">Download</a>
-    <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub project</a>
+    <ul>
+      <li><a class="sidebar-nav-item" href="{{ site.url }}/indice">French</a></li>
+      <li><a class="sidebar-nav-item" href="{{ site.url }}">English</a></li>
+    </ul>
     <span class="sidebar-nav-item">Currently v{{ site.version }}</span>
   </nav>
 

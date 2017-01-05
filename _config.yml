@@ -1,7 +1,7 @@
 # Site Info Setup
 title:
   en: Bashnetwork Blog
-  fr: Bashnetwork BLog
+  fr: Bashnetwork Blog
 tagline:
   en: Bash - The Party Network
   fr: Bash - Le Réseau Party
@@ -9,7 +9,7 @@ description:
   en: "Bashnetwork's blog"
   fr: Le Blog de Bashnetwork
 url: http://127.0.0.1:4000/
-baseurl: "/"
+baseurl: ""
 
 # Permalinks
 # Use of `relative_permalinks` ensures post links from the index work properly.
