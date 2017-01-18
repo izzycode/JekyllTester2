@@ -1,26 +1,34 @@
+{% assign categories_list = page.array %}
+{% assign lang_posts = site.posts | where:"lang", page.lang %}
+{% for post in lang_posts %}
+  {% for category in post.categories %}
+    {% if category_list contains category %}
+    {% else %}
+      {% assign categories_list = categories_list | push: category %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
+
 <aside id="category-list">
   <nav class="navbar navbar-inverse">
     <div id="categories-content" class="container-fluid">
       <ul class="nav navbar-nav">
-        <li><a href="#">Category1</a></li>
-        <li><a href="#">Category2</a></li>
-
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
         <li id="categories-selector">
           <div class="form-group">
             <select class="form-control navbar-text">
               <option>Categories</option>
-              <option value="1">Category1</option>
-              <option value="2">Category2</option>
-              <option value="3">Category3</option>
-              <option value="3">---------</option>
-              <option value="3">Category4</option>
-              <option value="3">Category5</option>
-              <option value="4">Category6</option>
+              <option>---------</option>
+              {% for category in categories_list %}
+                <option><a href="#">{{ category }}</a></option>
+              {% endfor %}
             </select>
           </div>
         </li>
-        <li><a href="#">Category3</a></li>
-        <li><a href="#">Category4</a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
       </ul>
     </div>
   </nav>

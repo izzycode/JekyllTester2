@@ -1,4 +1,4 @@
-<div class="header-title row">
+<div class="row">
   <div id="nav">
 
     <div id="venue-access" class="">
@@ -11,8 +11,8 @@
       </button>
     </div>
 
-    <a href="{{ site.url }}{{ site.baseurl }}/blog/">
-      <img src="{{ site.url }}{{ site.baseurl }}/public/images/Bash-Logo-150x150.png" alt="Bashnetwork's Logo" title="Bash" rel="blog">
+    <a href="{{ site.url }}{{ site.baseurl }}/">
+      <img src="{{ site.url }}{{ site.baseurl }}/public/icons/Bashnetwork-icon.png" alt="Bashnetwork's Logo" title="Bash" rel="blog">
     </a>
 
     <button  type="button" class="menu-toggle btn btn-md" onclick="menuAction();" data-target="#side-bar">
@@ -21,7 +21,7 @@
     </button>
   </div>
 
-  <div class="col-sm-8 col-sm-offset-1">
+  <div class="col-sm-8 col-sm-offset-1 hidden">
     <h1>{{ page.title }}</h1>
     <div id="title-underline"></div>
   </div>
@@ -29,7 +29,7 @@
 
 <div id="side-bar">
   <div>
-    <a href="#" onclick="menuAction(contentAction);" rel="tag" title="Close Menu">
+    <a class="menu-close" href="#" onclick="menuAction(contentAction);" rel="tag" title="Close Menu">
       <i class="fa fa-times"></i>
       <span class="sr-only">Close Menu</span>
     </a>
@@ -46,7 +46,7 @@
       <li></li>
       <li><a href="http://www.bashnetwork.com/#section-4" rel="tag" title="Feedback">Feedback</a></li>
       <li></li>
-      <li><a href="{{ site.url }}{{ site.baseurl }}/blog/" class="active" rel="tag" title="Blog">Blog</a></li>
+      <li><a href="{{ site.url }}{{ site.baseurl }}/" class="active" rel="tag" title="Blog">Blog</a></li>
       <li></li>
       {% if page.layout == "post" %}
         {% include post_lang_selector.html %}
@@ -56,3 +56,4 @@
     </ul>
   </div>
 </div>
+<div id="overlay" onclick="menuAction(contentAction);" hidden></div>

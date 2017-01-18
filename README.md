@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-# ![BashOffice](test.bashnetwork.com/public/images/Bash-Logo-150x150.png "Bashnetwork")
-=======
+
 # ![BashOffice](http://test.bashnetwork.com/public/images/Bash-Logo-150x150.png "Bashnetwork")
->>>>>>> 9d85462... Blog ready for testing (#1)
 
 ## Contents
 - [Description](#description)

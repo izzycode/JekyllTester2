@@ -6,13 +6,15 @@
 
       <div class="post-preview featured-post item" data-merge="2">
         <a href="{{ site.url }}{{ site.baseurl}}{{ post.url }}">
-          <div>
-            <img src="{{ site.url }}{{ site.baseurl }}/public/images/test-image.jpg" alt="" title="">
+          <div class="feat-post-img">
+            <img src="{{ site.url }}{{ site.baseurl }}/public/images/girls.jpg" alt="Women at a dance club" title="Girls night out">
           </div>
-          <h5>{{ post.title }}</h5>
-          <span><i class="fa fa-clock-o" aria-hidden="true"></i> {{ post.date | date_to_string }}</span>
-          <span><i class="fa fa-user" aria-hidden="true"></i> {{ post.author }}</span>
-          {{ post.content }}
+          <div class="feat-post-content">
+            <h5>{{ post.title }}</h5>
+            <span><i class="fa fa-clock-o" aria-hidden="true"></i> {{ post.date | date_to_string }}</span>
+            <span><i class="fa fa-user" aria-hidden="true"></i> {{ post.author }}</span>
+          </div>
+
         </a>
       </div>
 

@@ -1,9 +1,20 @@
 ---
 layout: default
 ---
+{% include menu.html %}
+
+<div class="post-title">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-10">
+        <h1>{{ page.title }}</h1>
+        <div id="title-underline"></div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="post container-fluid">
-  {% include header.html %}
 
   <div class="row">
     <div class="post-content col-lg-7 col-sm-offset-1 col-sm-10" >
@@ -18,15 +29,21 @@ layout: default
           <small>Tags</small>
           <div class="media-heading">
 
+            <!-- TODO need a view for tags listing -->
             {% if page.tags %}
               {% for tag in page.tags %}
                 {% case page.lang %}
                   {% when "en" %}
-                    <a href="{{ site.url }}{{ site.baseurl }}/blog/tags/#{{ tag | slugify }}" class="post-tag" rel="tag" title={{ tag | capitalize }} hreflang="en">{{ tag | capitalize }}</a>
+                    <!-- <a href="{{ site.url }}{{ site.baseurl }}/blog/tags/#{{ tag | slugify }}" class="post-tag" rel="tag" title={{ tag | capitalize }} hreflang="en">{{ tag | capitalize }}</a> -->
+                    <a href="/" class="post-tag" rel="tag" title={{ tag | capitalize }} hreflang="en">{{ tag | capitalize }}</a>
+
                   {% when "fr" %}
-                    <a href="{{ site.url }}{{ site.baseurl }}/blog-fr/tags/#{{ tag | slugify }}" class="post-tag" rel="tag" title={{ tag | capitalize }} hreflang="fr">{{ tag | capitalize }}</a>
+                    <!-- <a href="{{ site.url }}{{ site.baseurl }}/blog-fr/tags/#{{ tag | slugify }}" class="post-tag" rel="tag" title={{ tag | capitalize }} hreflang="fr">{{ tag | capitalize }}</a> -->
+                    <a href="/" class="post-tag" rel="tag" title={{ tag | capitalize }} hreflang="fr">{{ tag | capitalize }}</a>
+
                   {% when "es" %}
-                    <a href="{{ site.url }}{{ site.baseurl }}/blog-sp/tags/#{{ tag | slugify }}" class="post-tag" rel="tag" title={{ tag | capitalize }} hreflang="es">{{ tag | capitalize }}</a>
+                    <!-- <a href="{{ site.url }}{{ site.baseurl }}/blog-sp/tags/#{{ tag | slugify }}" class="post-tag" rel="tag" title={{ tag | capitalize }} hreflang="es">{{ tag | capitalize }}</a> -->
+                    <a href="/" class="post-tag" rel="tag" title={{ tag | capitalize }} hreflang="es">{{ tag | capitalize }}</a>
                 {% endcase %}
               {% endfor %}
             {% endif %}
@@ -64,8 +81,7 @@ layout: default
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
-          <li> <!-- TODO: add media link async -->
-
+          <li> 
             <a id="pinterest" class="btn btn-default" href="#" title="Pin this" rel="nofollow" target="_blank" onclick="window.open('//pinterest.com/pin/create/button/?url={{ site.url }}{{ site.baseurl }}{{ page.url }}&amp;description={{ site.title[page.lang]}}&nbsp;&dash;&nbsp;{{ page.title }}&amp;media=','pin-share-dialog','width=626,height=436');return false;" >
               <i class="fa fa-pinterest"></i>
             </a>
@@ -113,7 +129,7 @@ layout: default
               <li>
 
                 <div class="img-container">
-                  <img src="{{ site.url }}{{ site.baseurl }}/public/images/test-image.jpg" alt="Bashnetwork" title="Bashnetwork">
+                  <img src="{{ site.url }}{{ site.baseurl }}/public/images/girls.jpg" alt="Women at a dance club" title="Girls night Out">
                 </div>
 
                 <h5>
