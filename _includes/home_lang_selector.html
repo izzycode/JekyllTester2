@@ -1,0 +1,41 @@
+
+{% if page.lang != "en" %}
+  {% assign english = site.html_pages | where:"ref", page.ref | where:"lang", "en" %}
+  {% for item in english %}
+    <li>
+      <a href="{{ site.url }}{{ site.baseurl }}{{ item.url }}" rel="alternate" hreflang="en">
+        English
+        <img src="{{ site.url }}{{ site.baseurl }}/public/images/en.png" alt="Union Jack" title="English">
+      </a>
+    </li>
+    <li></li>
+  {% endfor %}
+{% endif %}
+
+
+{% if page.lang != "fr" %}
+  {% assign french = site.html_pages | where:"ref", page.ref | where:"lang", "fr" %}
+  {% for item in french %}
+    <li>
+      <a href="{{ site.url }}{{ site.baseurl }}{{ item.url }}" rel="alternate" hreflang="fr">
+        French
+        <img src="{{ site.url }}{{ site.baseurl }}/public/images/fr.png" alt="Flag of France" title="French" rel="alternate">
+      </a>
+    </li>
+    <li></li>
+  {% endfor %}
+{% endif %}
+
+
+{% if page.lang != "es" %}
+  {% assign spanish = site.html_pages | where:"ref", page.ref | where:"lang", "es" %}
+  {% for item in spanish %}
+    <li>
+      <a href="{{ site.url }}{{ site.baseurl }}{{ item.url }}" rel="alternate" hreflang="es">
+        Spanish
+        <img src="{{ site.url }}{{ site.baseurl }}/public/images/es.png" alt="Flag of Spain" title="Spanish" rel="alternate">
+      </a>
+    </li>
+    <li></li>
+  {% endfor %}
+{% endif %}

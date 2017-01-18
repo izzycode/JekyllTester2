@@ -1,0 +1,31 @@
+---
+layout: 
+---
+
+<div>
+  {% if page.lang != "en" %}
+    {% assign english = site.pages | where:"ref", page.ref | where:"lang", "en" %}
+    {% for item in english %}
+      <a href="{{ site.url }}{{ site.baseurl }}{{ item.url }}">En</a>
+    {% endfor %}
+  {% endif %}
+
+  {% if page.lang != "fr" %}
+    {% assign french = site.pages | where:"ref", page.ref | where:"lang", "fr" %}
+    {% for item in french %}
+      <a href="{{ site.url }}{{ site.baseurl }}{{ item.url }}">Fr</a>
+    {% endfor %}
+  {% endif %}
+
+  {% if page.lang != "es" %}
+    {% assign spanish = site.pages | where:"ref", page.ref | where:"lang", "es" %}
+    {% for item in spanish %}
+      <a href="{{ site.url }}{{ site.baseurl }}{{ item.url }}">Sp</a>
+    {% endfor %}
+  {% endif %}
+</div>
+
+<div class="page">
+  <h1 class="page-title">{{ page.title }}</h1>
+  {{ content }}
+</div>

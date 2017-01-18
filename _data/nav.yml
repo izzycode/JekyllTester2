@@ -1,0 +1,14 @@
+- Home:
+  - "/blog/"
+  - Categories:
+    - en: '/blog/categories/'
+    - fr: '/blog-fr/categories/'
+    - es: '/blog-es/categorias/'
+  - Tags:
+    - en: '/blog/tags/'
+    - fr: '/blog-fr/tags/'
+    - es: '/blog-es/tags/'
+- About:
+  - en: '/about/'
+  - fr: '/about-fr/'
+  - es: '/about-es/'

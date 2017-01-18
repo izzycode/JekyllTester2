@@ -1,0 +1,38 @@
+
+{% assign categories_list = page.array %}
+{% assign lang_posts = site.posts | where:"lang", page.lang %}
+{% for post in lang_posts %}
+  {% for category in post.categories %}
+    {% if categories_list contains category %}
+    {% else %}
+      {% assign categories_list = categories_list | push: category %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
+<div class="tags-expo">
+  <div class="tags-expo-list">
+    {% for category in categories_list %}
+      <a href="#{{ category | slugify }}" class="post-tag">{{ category }}</a>
+    {% endfor %}
+  </div>
+  <hr/>
+
+  <div class="tags-expo-section">
+    {% for category in categories_list %}
+      <h2 id="{{ category | slugify }}">{{ category }}</h2>
+      <ul class="tags-expo-posts">
+        {% for post in site.posts | where:"lang", page.lang %}
+          {% if post.categories contains category %}
+            <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
+              <li>
+                {{ post.title }}
+                <small class="post-date">{{ post.date | date_to_string }}</small>
+              </li>
+            </a>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  </div>
+</div>

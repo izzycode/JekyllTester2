@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+{% case page.lang %}
+  {% when "en" %}
+    <html lang="en-us">
+  {% when "fr" %}
+    <html lang="fr">
+  {% when "es" %}
+    <html lang="es">
+{% endcase %}
+
+  {% include head.html %}
+
+  <body>
+
+    {{ content }}
+
+    {% include scripts.html %}
+
+  </body>
+</html>

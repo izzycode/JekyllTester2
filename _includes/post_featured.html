@@ -1,0 +1,21 @@
+
+{% assign featured_posts = site.posts | where:"featured", true | where:"lang", page.lang %}
+<section id="featured-posts">
+  <div class="owl-carousel owl-theme">
+    {% for post in featured_posts %}
+
+      <div class="post-preview featured-post item" data-merge="2">
+        <a href="{{ site.url }}{{ site.baseurl}}{{ post.url }}">
+          <div>
+            <img src="{{ site.url }}{{ site.baseurl }}/public/images/test-image.jpg" alt="" title="">
+          </div>
+          <h5>{{ post.title }}</h5>
+          <span><i class="fa fa-clock-o" aria-hidden="true"></i> {{ post.date | date_to_string }}</span>
+          <span><i class="fa fa-user" aria-hidden="true"></i> {{ post.author }}</span>
+          {{ post.content }}
+        </a>
+      </div>
+
+    {% endfor %}
+  </div>
+</section>

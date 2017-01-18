@@ -1,0 +1,21 @@
+---
+title: Reference List
+layout: page
+lang: en
+ref: reference list
+
+#published: false
+array: []
+---
+
+<h3 style="color:#E50034;"></h1>
+
+{% assign myArray = page.array %}
+
+{% for item in site.pages %}
+  {% assign myArray = myArray | push: item.ref  %}
+{% endfor %}
+
+
+{% assign myArray = myArray | split, "," %}
+<p>Reference List: {{ myArray }}</p>

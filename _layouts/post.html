@@ -1,0 +1,146 @@
+---
+layout: default
+---
+
+<div class="post container-fluid">
+  {% include header.html %}
+
+  <div class="row">
+    <div class="post-content col-lg-7 col-sm-offset-1 col-sm-10" >
+      {{ content }}
+
+      <br>
+
+      <div id="tags">
+        <hr>
+        <div class="pull-left"><i class="fa fa-tags"></i></div>
+        <div class="media-body">
+          <small>Tags</small>
+          <div class="media-heading">
+
+            {% if page.tags %}
+              {% for tag in page.tags %}
+                {% case page.lang %}
+                  {% when "en" %}
+                    <a href="{{ site.url }}{{ site.baseurl }}/blog/tags/#{{ tag | slugify }}" class="post-tag" rel="tag" title={{ tag | capitalize }} hreflang="en">{{ tag | capitalize }}</a>
+                  {% when "fr" %}
+                    <a href="{{ site.url }}{{ site.baseurl }}/blog-fr/tags/#{{ tag | slugify }}" class="post-tag" rel="tag" title={{ tag | capitalize }} hreflang="fr">{{ tag | capitalize }}</a>
+                  {% when "es" %}
+                    <a href="{{ site.url }}{{ site.baseurl }}/blog-sp/tags/#{{ tag | slugify }}" class="post-tag" rel="tag" title={{ tag | capitalize }} hreflang="es">{{ tag | capitalize }}</a>
+                {% endcase %}
+              {% endfor %}
+            {% endif %}
+
+          </div>
+        </div>
+        <hr>
+
+      </div>
+
+      <div id="social-share">
+        <ul>
+          <li>
+            <a class="btn btn-default" title="Share on Facebook" href="#" target="_blank" rel="nofollow" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+'{{ site.url }}{{ site.baseurl }}{{ page.url }}','facebook-share-dialog','width=626,height=436');return false;">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="btn btn-default" href="#" title="Share on Twitter" rel="nofollow" target="_blank" onclick="window.open('http://twitter.com/share?text={{ site.title[page.lang]}}&nbsp;&dash;&nbsp;{{ page.title }}&amp;url={{ site.url }}{{ site.baseurl }}{{ page.url }}','twitter-share-dialog','width=626,height=436');return false;">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="btn btn-default" href="#" title="Share on LinkedIn" rel="nofollow" target="_blank" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&amp;url={{ site.url }}{{ site.baseurl }}{{ page.url }}&amp;title={{ site.title[page.lang]}}&nbsp;&dash;&nbsp;{{ page.title }}&amp;source=Bash','linkedin-share-dialog','width=626,height=436');return false;">
+              <i class="fa fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="btn btn-default" href="#" title="Share on Tumblr" rel="nofollow" target="_blank" onclick="window.open('http://www.tumblr.com/share/link?url={{ site.url }}{{ site.baseurl }}{{ page.url }}&amp;name={{ site.title[page.lang]}}&nbsp;&dash;&nbsp;{{ page.title }}','tumblr-share-dialog','width=626,height=436');return false;">
+              <i class="fa fa-tumblr"></i>
+            </a>
+          </li>
+          <li>
+            <a class="btn btn-default" href="#" title="Share on Google Plus" rel="nofollow" target="_blank" onclick="window.open('https://plus.google.com/share?url={{ site.url }}{{ site.baseurl }}{{ page.url }}','googleplus-share-dialog','width=626,height=436');return false;">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+          <li> <!-- TODO: add media link async -->
+
+            <a id="pinterest" class="btn btn-default" href="#" title="Pin this" rel="nofollow" target="_blank" onclick="window.open('//pinterest.com/pin/create/button/?url={{ site.url }}{{ site.baseurl }}{{ page.url }}&amp;description={{ site.title[page.lang]}}&nbsp;&dash;&nbsp;{{ page.title }}&amp;media=','pin-share-dialog','width=626,height=436');return false;" >
+              <i class="fa fa-pinterest"></i>
+            </a>
+          </li>
+          <li>
+            <a class="btn btn-default" href="mailto:?subject={{ site.title[page.lang]}}&nbsp;&dash;&nbsp;{{ page.title }}&amp;body={{ site.url }}{{ site.baseurl }}{{ page.url }}" title="Email this" rel="mail">
+              <i class="fa fa-envelope"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="col-lg-3 col-sm-10 col-sm-offset-1 col-lg-offset-0">
+      <aside class="related">
+
+        <div id="related-search" hidden>
+          {% if page.lang == "en" %}
+            <h2>Search</h2>
+          {% elsif page.lang == "fr" %}
+            <h2>Chercher</h2>
+          {% elsif page.lang == "es" %}
+            <h2>Buscar</h2>
+          {% endif %}
+
+          <input type="text" placeholder="" class="form-control">
+        </div>
+
+        <div id="related-previews">
+          {% if page.lang == "en" %}
+            <h2>Recent Posts</h2>
+          {% elsif page.lang == "fr" %}
+            <h2>Messages récents</h2>
+          {% elsif page.lang == "es" %}
+            <h2>Artículos Recientes</h2>
+          {% endif %}
+
+          <div id="red-underline"></div>
+
+          <ul class="related-posts">
+            {% assign posts_in_lang = site.related_posts | where:"lang", page.lang %}
+
+            {% for post in posts_in_lang limit:3 %}
+              <li>
+
+                <div class="img-container">
+                  <img src="{{ site.url }}{{ site.baseurl }}/public/images/test-image.jpg" alt="Bashnetwork" title="Bashnetwork">
+                </div>
+
+                <h5>
+                  <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" rel="post" title="{{ post.title | capitalize }}" hreflang="{{ page.lang }}">
+                    {{ post.title }}
+                  </a>
+                  <br>
+                  <span>{{ post.date | date_to_string }}</span>
+                </h5>
+
+                <div class="extra-content">
+
+                  {{ post.content }}
+
+                </div>
+
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+
+
+      </aside>
+    </div>
+
+  </div>
+
+</div>
+
+{% include footer.html %}

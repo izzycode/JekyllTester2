@@ -1,0 +1,28 @@
+---
+title: À propos
+layout: page
+lang: fr
+ref: about
+---
+
+<h3 style="color:#E50034;">page.test-var: {{ page.test-var }}</h1>
+
+<h3 style="color:#E50034;">page.date: {{ page.date }}</h1>
+
+<h3 style="color:#E50034;">site.time: {{ site.time }}</h1>
+
+<h3 style="color:#E50034;">page.url: {{ page.url }}</h1>
+
+<h3 style="color:#E50034;">site.collections: {{ site.collections }}</h1>
+  {% for collection in site.collections %}
+    <p>item: {{ collection }}</p>
+  {% endfor %}
+
+<h3 style="color:#E50034;">site.static_files: {{ site.static_files }}</h1>
+{% for file in site.static_files %}
+  <p>name: {{ file.path }}</p>
+  <p>modified time: {{ file.modified_time }}</p>
+  <p>extname: {{ file.extname }}</p>
+{% endfor %}
+
+<h3 style="color:#E50034;">Test data: {{ site.author }}</h1>

@@ -1,0 +1,25 @@
+
+{% assign all_posts = site.posts | where:"lang", page.lang %}
+<main id="recent-posts" class="container-fluid">
+  <div class="row">
+    {% for post in all_posts %}
+
+      <div class="col-md-4 col-sm-6" >
+        <div class="post-preview recent-post">
+          <div>
+            <a href="{{ site.url }}{{ site.baseurl}}{{ post.url }}" rel="post" title="{{ post.title }}" hreflang="{{ page.lang }}">
+              <img class="img-responsive" src="{{ site.url }}{{ site.baseurl }}/public/images/drinks-image.jpg" alt="Cold bottle of Champage">
+            </a>
+          </div>
+          <a href="{{ site.url }}{{ site.baseurl}}{{ post.url }}" rel="post" title="{{ post.title }}" hreflang="{{ page.lang }}">
+            <h5>{{ post.title }}</h5>
+            <span><i class="fa fa-clock-o" aria-hidden="true"></i> {{ post.date | date_to_string }}</span>
+            <span><i class="fa fa-user" aria-hidden="true"></i> {{ post.author }}</span>
+            {{ post.content }}
+          </a>
+        </div>
+      </div>
+
+    {% endfor %}
+  </div>
+</main>

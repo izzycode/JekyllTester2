@@ -1,0 +1,66 @@
+# Site Info Setup
+title:
+  en: Bashnetwork Blog
+  fr: Bashnetwork Blog
+  es: Bashnetwork Blog
+tagline:
+  en: Bash - The Party Network
+  fr: Bash - Le Réseau Party
+  es: Bash - La Conexión de Fiesta
+description:
+  en: "Bashnetwork's blog"
+  fr: Le Blog de Bashnetwork
+  es: Bashnetwork Blog
+url: ""
+baseurl: "test.bashnetwork.com"
+
+# Permalinks
+permalink: blog/:title/
+
+# About/contact
+author:
+  name: Bashnetwork
+  description: Bashnetwork - The party network
+  contact:
+    facebook: https://www.facebook.com/BashPartyNetwork/
+    twitter: https://twitter.com/bashnetwork
+    google_plus: https://plus.google.com/s/bashnetwork/top
+    url: http://www.bashnetwork.com/
+    email: support@bashnetwork.com
+    telephone: +1-866-740-4531
+
+# Site configurations
+gems:
+markdown: kramdown
+kramdown:
+  input: GFM
+excerpt_separator: "<!-- more -->"
+
+# Puglins
+mathjax: true # whether support mathjax
+google_analytics_token: "" # leave blank if you don't want google analytics
+
+# Custom vars
+version: 1.0.0
+
+# Jekyll Default Fields
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      tags: []
+      categories: []
+      # these are necessary fields for structured data testing
+      description: ""
+      author: ""
+      title: ""
+      publisher: "Bashnetwork"
+      lang: ""
+      ref: ""
+      featured: true
+      global: true
+      region:
+        city: ""
+        state: ""
+        country: ""
