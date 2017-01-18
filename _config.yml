@@ -12,7 +12,7 @@ description:
   fr: Le Blog de Bashnetwork
   es: Bashnetwork Blog
 url: ""
-baseurl: "test.bashnetwork.com"
+baseurl: "http://test.bashnetwork.com"
 
 # Permalinks
 permalink: blog/:title/
